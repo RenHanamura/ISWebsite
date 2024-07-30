@@ -13,36 +13,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
-<body class="font-haken bg-gray-100 py-8">
+<body class="font-haken bg-gray-100 py-0">
 
-    <header class="bg-white">
-        <nav class="flex justify-between items-center w-[92%]  mx-auto">
-            <div>
+    <header class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-white py-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center px-10">
+            <div class="flex items-center gap-4">
                 <a href="../../index.html">
-                    <img class="w-20 cursor-pointer" src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png" alt="Logo">
+                    <img class="w-12 cursor-pointer" src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png" alt="Logo">
                 </a>
+                <h1 class="text-3xl font-bold">Universidad Politecnica de Tecámac</h1>
             </div>
-            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
-                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                    <li>
-                        <a class="hover:text-gray-500" href="./legislacion.html">Legislación</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="./leyes.html">Leyes</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="./procesos.html">Procesos</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="./pages/etica.html">Ética</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="./caracteristicas.html">Características</a>
-                    </li>
-                    <li>
-                        <a class="hover:text-gray-500" href="./conclusiones.html">Conclusiones</a>
-                    </li>
-                </ul>
+            <div class="nav-links hidden md:flex items-center gap-8">
+                <a class="hover:text-gray-300" href="./legislacion.html">Legislación</a>
+                <a class="hover:text-gray-300" href="./leyes.html">Leyes</a>
+                <a class="hover:text-gray-300" href="./procesos.html">Procesos</a>
+                <a class="hover:text-gray-300" href="./etica.html">Ética</a>
+                <a class="hover:text-gray-300" href="./caracteristicas.html">Características</a>
+                <a class="hover:text-gray-300" href="./conclusiones.html">Conclusiones</a>
+            </div>
+            <div class="md:hidden">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer"></ion-icon>
             </div>
         </nav>
     </header>
