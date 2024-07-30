@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body class="font-haken bg-gray-100 py-8">
+
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <div>
+                <a href="index.html">
+                    <img class="w-20 cursor-pointer" src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png" alt="Logo">
+                </a>
+            </div>
+            <div class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="./legislacion.html">Legislación</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./leyes.html">Leyes</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./procesos.html">Procesos</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./etica.html">Ética</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./caracteristicas.html">Características</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="./conclusiones.html">Conclusiones</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <section class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8">
+        <article class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-2xl p-10 text-white text-center md:rounded-2xl md:w-1/2 md:grid md:content-center">
+            <p class="text-2xl mb-2 font-bold">Referencias
+            </p>
+            <ul class="list-disc list-inside ml-auto font-bold text-white-gray-blue">
+                <li> Seminario Protección de Datos Personales. (s. f.). <a href="https://infocdmx.org.mx/seminariodatos2016/" target="_blank">https://infocdmx.org.mx/seminariodatos2016/</a></li>
+            </ul>              
+            <ul class="list-disc list-inside ml-auto font-bold text-white-gray-blue">
+                <li> Garrido, A. (2005). "Delitos informáticos en México. Reconocimiento en los ordenamientos penales de las entidades mexicanas."<a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-36072023000100005" target="_blank">https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-36072023000100005</a></li>
+            </ul>              
+            <ul class="list-disc list-inside ml-auto font-bold text-white-gray-blue">
+                <li> Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales. (s.f.). Aviso de privacida <a href="https://home.inai.org.mx/" target="_blank">https://home.inai.org.mx/</a></li>
+            </ul>              
+            <ul class="list-disc list-inside ml-auto font-bold text-white-gray-blue">
+                <li> Instituto Nacional del Derecho de Autor. (s.f.). Procedimiento de registro. <a href="https://www.indautor.gob.mx/" target="_blank">https://www.indautor.gob.mx/</a></li>
+            </ul>
+        </article>
+
+        <article class="p-10 grid gap-6 md:w-1/2">
+            <h3 class="text-xl font-bold">Conclusiones</h3>
+            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+                La ética informática y la legislación sobre delitos informáticos son dos pilares fundamentales en la era digital, ya que proporcionan un marco normativo y moral para el uso adecuado y seguro de las tecnologías de la información. Ambos aspectos son cruciales para proteger los derechos de los individuos, mantener la integridad de los sistemas y garantizar la confianza en el entorno digital.
+            </p>
+            
+            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+                <p class="ml-3 text-lime-800 text-lg">Ética Informática:</p>
+            </div>
+            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+                La ética informática se centra en los principios y normas que guían el comportamiento responsable en el uso de las tecnologías de la información. En un mundo cada vez más dependiente de la tecnología, la ética informática se convierte en una disciplina esencial para asegurar que los profesionales de TI actúen con responsabilidad y respeto hacia los usuarios y sus datos. Los principios de privacidad, confidencialidad, integridad, responsabilidad y transparencia son fundamentales para construir un entorno digital seguro y confiable. Estos principios ayudan a prevenir abusos y a fomentar una cultura de respeto y responsabilidad en el manejo de la información.
+            </p>
+            
+            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+                <p class="ml-3 text-lime-800 text-lg">Ética Informática:</p>
+            </div>
+            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+                La ética informática se centra en los principios y normas que guían el comportamiento responsable en el uso de las tecnologías de la información. En un mundo cada vez más dependiente de la tecnología, la ética informática se convierte en una disciplina esencial para asegurar que los profesionales de TI actúen con responsabilidad y respeto hacia los usuarios y sus datos. Los principios de privacidad, confidencialidad, integridad, responsabilidad y transparencia son fundamentales para construir un entorno digital seguro y confiable. Estos principios ayudan a prevenir abusos y a fomentar una cultura de respeto y responsabilidad en el manejo de la información.
+            </p>
+
+            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+                <p class="ml-3 text-lime-800 text-lg">Delitos Informáticos:</p>
+            </div>
+            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+                Los delitos informáticos, por otro lado, representan una amenaza significativa para la seguridad y la privacidad en el mundo digital. La ciberdelincuencia abarca una amplia gama de actividades ilícitas, desde el acceso no autorizado a sistemas informáticos (hacking) y el uso de software malicioso (malware), hasta el fraude en línea y el robo de identidad. Estos delitos pueden tener consecuencias graves tanto para los individuos como para las organizaciones, incluyendo pérdidas financieras, daño a la reputación y compromisos de seguridad.
+            </p>
+
+            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+                <p class="ml-3 text-lime-800 text-lg">Regulación y Legislación:</p>
+            </div>
+            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+                La respuesta legal a los delitos informáticos ha evolucionado para enfrentar los desafíos únicos que presentan. En México, por ejemplo, la legislación ha sido adaptada para incluir sanciones específicas para estos delitos y para mejorar la cooperación internacional en la persecución de ciberdelincuentes. La actualización de los códigos penales, la capacitación de cuerpos policiales especializados y la participación en tratados internacionales como el Convenio de Budapest son pasos importantes para fortalecer la lucha contra la ciberdelincuencia.
+            </p>
+
+            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+                <p class="ml-3 text-lime-800 text-lg">Importancia y Futuro:</p>
+            </div>
+            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+                La combinación de una sólida ética informática y una legislación efectiva es crucial para proteger los derechos de los usuarios y mantener la seguridad en el entorno digital. A medida que la tecnología continúa avanzando, será esencial que tanto la ética como la legislación se adapten para abordar nuevos desafíos y garantizar que el uso de la tecnología siga siendo beneficioso y seguro para todos.
+            </p>
+
+            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+                En conclusión, la ética informática y la legislación sobre delitos informáticos son componentes esenciales para una sociedad digital sana y segura. Los principios éticos guían el comportamiento responsable de los profesionales de TI, mientras que las leyes proporcionan un marco para prevenir y sancionar los abusos. Juntos, estos elementos forman la base para un uso seguro y responsable de la tecnología en la vida diaria y profesional.
+            </p>              
+        </article>
+    </section>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+</body>
+</html>
+
+

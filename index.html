@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad de la Información</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</head>
+<body class="font-poppins bg-gray-50">
+
+    <header class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-4 shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center px-10">
+            <div class="flex items-center gap-4">
+                <a href="index.html">
+                    <img class="w-20 cursor-pointer" src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png" alt="Logo">
+                </a>
+                <h1 class="text-3xl font-bold">Universidad Politecnica de Tecámac</h1>
+            </div>
+            <div class="nav-links hidden md:flex items-center gap-8">
+                <a class="hover:text-gray-300" href="src/pages/legislacion.html">Legislación</a>
+                <a class="hover:text-gray-300" href="src/pages/leyes.html">Leyes</a>
+                <a class="hover:text-gray-300" href="src/pages/procesos.html">Procesos</a>
+                <a class="hover:text-gray-300" href="src/pages/etica.html">Ética</a>
+                <a class="hover:text-gray-300" href="src/pages/caracteristicas.html">Características</a>
+                <a class="hover:text-gray-300" href="src/pages/conclusiones.html">Conclusiones</a>
+            </div>
+            <div class="md:hidden">
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu hidden bg-white shadow-md fixed inset-0 z-50 p-6 md:hidden">
+        <nav class="flex flex-col items-start gap-4">
+            <a class="hover:text-blue-600" href="src/pages/legislacion.html">Legislación</a>
+            <a class="hover:text-blue-600" href="src/pages/leyes.html">Leyes</a>
+            <a class="hover:text-blue-600" href="src/pages/procesos.html">Procesos</a>
+            <a class="hover:text-blue-600" href="src/pages/etica.html">Ética</a>
+            <a class="hover:text-blue-600" href="src/pages/caracteristicas.html">Características</a>
+            <a class="hover:text-blue-600" href="src/pages/conclusiones.html">Conclusiones</a>
+        </nav>
+    </div>
+
+    <main class="container mx-auto my-12 p-6 bg-white rounded-xl shadow-2xl">
+        <section class="md:flex md:items-start md:gap-12">
+            <article class="bg-gradient-to-r from-blue-400 to-teal-500 text-white p-10 rounded-xl md:w-1/3">
+                <h2 class="text-2xl font-bold mb-4">Universidad Politécnica de Tecámac</h2>
+                <p class="text-lg font-semibold">Ingeniería en Software</p>
+                <p class="mt-2">Seguridad de la Información</p>
+                <div class="w-32 h-32 bg-white rounded-full mx-auto my-8 flex items-center justify-center md:w-40 md:h-40">
+                    <img src="src/assets/software.png" alt="UPTecámac Logo">
+                </div>
+                <p class="font-semibold">Profesor: Néstor Apolo López González</p>
+                <p class="mt-2">Alumno:<br>Salazar De León Andrick<br>3924IS</p>
+            </article>
+            <article class="mt-8 md:mt-0 md:w-2/3">
+                <h3 class="text-3xl font-bold text-gray-800 mb-6">Resumen</h3>
+                <div class="space-y-6">
+                    <div class="p-6 border-l-4 border-red-500 bg-red-50 rounded-lg shadow">
+                        <h4 class="text-2xl font-semibold text-red-600">Legislación Informática</h4>
+                        <p class="mt-2 text-gray-700">En esta sección se presentan los conceptos fundamentales relacionados con los derechos de autor, la privacidad y la protección de datos. Se define qué son los derechos de autor, cómo protegen las obras de los creadores y se exploran los aspectos básicos de la privacidad y la importancia de la protección de los datos personales en la era digital.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-yellow-500 bg-yellow-50 rounded-lg shadow">
+                        <h4 class="text-2xl font-semibold text-yellow-700">Leyes</h4>
+                        <p class="mt-2 text-gray-700">Esta sección aborda las leyes que rigen los derechos de autor, la privacidad y la protección de datos tanto a nivel nacional como internacional. Se examinan las normativas más relevantes y su aplicación en diferentes jurisdicciones, proporcionando un panorama amplio del marco legal existente.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-green-500 bg-green-50 rounded-lg shadow">
+                        <h4 class="text-2xl font-semibold text-green-700">Procesos</h4>
+                        <p class="mt-2 text-gray-700">Aquí se detalla el procedimiento específico para llevar a cabo el registro de una obra ante la institución de derechos de autor, incluyendo la documentación requerida y los pasos a seguir desde la presentación hasta la obtención del registro.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-blue-500 bg-blue-50 rounded-lg shadow">
+                        <h4 class="text-2xl font-semibold text-blue-700">Ética</h4>
+                        <p class="mt-2 text-gray-700">Esta sección introduce los conceptos básicos de la ética informática y los delitos informáticos. Se define qué se entiende por ética en el contexto de la informática y se describen los diferentes tipos de delitos informáticos que pueden ocurrir.</p>
+                    </div>
+                    <div class="p-6 border-l-4 border-purple-500 bg-purple-50 rounded-lg shadow">
+                        <h4 class="text-2xl font-semibold text-purple-700">Características</h4>
+                        <p class="mt-2 text-gray-700">Se examinan las características específicas de los delitos informáticos que están tipificados en las leyes mexicanas, proporcionando ejemplos y explicaciones detalladas de cada tipo de delito.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white py-6 mt-12">
+        <div class="container mx-auto text-center">
+            <p class="font-semibold">© 2024 Universidad Politécnica de Tecámac</p>
+        </div>
+    </footer>
+
+    <script>
+        const navLinks = document.querySelector('.mobile-menu');
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            navLinks.classList.toggle('hidden');
+        }
+    </script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyApUrBqayzUtGYxpC_JVMfnRdr_dmiD8IU",
+            authDomain: "seguridad-de-la-informac-f61a5.firebaseapp.com",
+            projectId: "seguridad-de-la-informac-f61a5",
+            storageBucket: "seguridad-de-la-informac-f61a5.appspot.com",
+            messagingSenderId: "551472820399",
+            appId: "1:551472820399:web:634da2b595c6fa6d42645a",
+            measurementId: "G-MVKNMQP29R"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+</body>
+</html>
