@@ -19,26 +19,26 @@
     />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <style>
-        .video-container {
-            position: relative;
-        }
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .video-container:hover .video-overlay {
-            opacity: 1;
-        }
-    </style>
+      .video-container {
+          position: relative;
+      }
+      .video-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+      }
+      .video-container:hover .video-overlay {
+          opacity: 1;
+      }
+  </style>
   </head>
   <body class="font-haken bg-gray-100 py-0">
     <header
@@ -79,17 +79,13 @@
       </nav>
     </header>
 
-    <section
-      class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8"
-    >
-    <article class="video-container bg-gradient-to-b from-red-500 to-orange-500 text-white p-10 rounded-xl text-center md:w-1/2 flex flex-col justify-center items-center">
-    <h2 class="text-2xl font-bold mb-4">Más Información</h2>
-    <div class="video-overlay">
-        <iframe
-          class="items-center"
-          src="https://www.youtube.com/embed/_o-2fQ3bDRQ?si=ugG6buURoSyyzm3A&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-64 md:h-80 rounded-lg"></iframe>
+    <section class="container mx-auto mt-12 p-6 bg-white rounded-xl shadow-2xl md:flex md:max-w-6xl">
+      <article class="video-container bg-gradient-to-b from-red-500 to-orange-500 text-white p-10 rounded-xl text-center md:w-1/2 flex flex-col justify-center items-center">
+          <h2 class="text-2xl font-bold mb-4">Más Información</h2>
+          <div class="video-overlay">
+            <iframe src="https://www.youtube.com/embed/_o-2fQ3bDRQ?si=ugG6buURoSyyzm3A&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-64 md:h-80 rounded-lg"></iframe>
+          </div>
       </article>
-
       <article class="p-10 grid gap-6 md:w-1/2">
         <h3 class="text-xl font-bold">
           Características de los delitos informáticos tipificados en México
@@ -97,10 +93,10 @@
 
         <p class="ml-auto font-bold text-dark-gray-blue">
           En forma general segun el poder judicial, las principales
-          características que revisten los Delitos informáticos son
+          características que revisten los Delitos informáticos son:
         </p>
         <ul class="list-disc ml-auto text-dark-gray-blue text-justify">
-          <li>Conductas criminógenas de cuello blanco.</li>
+          <li><strong>Criminógenas de cuello blanco.</strong></li>
           <br />
           <li>
             Son acciones ocupacionales, en cuanto que muchas veces se realizan
