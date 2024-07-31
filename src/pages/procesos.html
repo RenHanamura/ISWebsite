@@ -12,10 +12,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        .video-container {
+            position: relative;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body class="font-haken bg-gray-100 py-0">
 
-    <header class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-white py-4 shadow-lg">
+    <header class="bg-gradient-to-r from-purple-500 to-teal-500 text-white py-4 shadow-lg">
         <nav class="container mx-auto flex justify-between items-center px-10">
             <div class="flex items-center gap-4">
                 <a href="../../index.html">
@@ -37,46 +58,47 @@
         </nav>
     </header>
 
-    <section class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8">
-        <article class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-2xl p-10 text-white text-center md:rounded-2xl md:w-1/2 md:grid md:content-center">
-            <p class="text-2xl mb-2 font-bold">Ejemplo</p>
-            <iframe src="https://www.youtube.com/embed/bZIirBXVvks?si=mp1r0XwQ1LxuehBK&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section class="container mx-auto mt-12 p-6 bg-white rounded-xl shadow-2xl md:flex md:max-w-6xl">
+        <article class="video-container bg-gradient-to-b from-purple-500 to-teal-500 text-white p-10 rounded-xl text-center md:w-1/2 flex flex-col justify-center items-center">
+            <h2 class="text-2xl font-bold mb-4">Más Información</h2>
+            <div class="video-overlay">
+            <iframe src="https://www.youtube.com/embed/VpZJ-KTJaxo?si=jBX0Zqa495WuLlAm&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-64 md:h-80 rounded-lg"></iframe>
         </article>
 
         <article class="p-10 grid gap-6 md:w-1/2">
             <h3 class="text-xl font-bold">Procesos</h3>
             <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-light-red text-lg">Proceso de trámite de registro de obras ante la institución de derechos de autor</p>
+                <p class="text-light-red text-lg">Proceso de trámite de registro de obras ante la institución de derechos de autor</p>
             </div>
 
-            <p class="ml-auto font-bold text-dark-gray-blue">
-                Proceso de registro
+            <p class="font-bold text-dark-gray-blue">
+                1. Proceso de registro
             </p>
 
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Solicitud: Completar y presentar la solicitud de registro, especificando el tipo de obra y proporcionando la información requerida sobre el autor y la obra.</li><br/>
-                <li>Revisión: El INDAUTOR revisa la solicitud y la documentación presentada para verificar su cumplimiento con los requisitos legales.</li><br/>
-                <li>Pago de derechos: Realizar el pago de los derechos correspondientes, cuyo monto depende del tipo de obra y el trámite.</li><br/>
-                <li>Certificado de registro: Si la solicitud es aprobada, el INDAUTOR emite un certificado de registro, que otorga protección legal a la obra y sus derechos de autor.</li><br/>
+            <ul class="list-disc list-inside ml-auto text-dark-gray-blue text-justify">
+                <li><strong>Solicitud:</strong> Completar y presentar la solicitud de registro, especificando el tipo de obra y proporcionando la información requerida sobre el autor y la obra.</li><br/>
+                <li><strong>Revisión:</strong> El <strong>INDAUTOR</strong> revisara la solicitud y su respectiva documentación presentada para poder verificar su cumplimiento con los requisitos legales.</li><br/>
+                <li><strong>Pago de derechos:</strong> Realizar el pago de los derechos correspondientes, cuyo monto dependera del tipo de obra y el trámite a realizar.</li><br/>
+                <li><strong>Certificado de registro:</strong> Si la solicitud es aprobada, el <strong>INDAUTOR</strong> emitira un certificado de registro, el cual otorgara la protección legal a la obra y sus derechos de autor.</li><br/>
             </ul>
 
             <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                Este proceso garantiza que los derechos de autor sean reconocidos y protegidos legalmente, permitiendo a los autores ejercer sus derechos sobre sus obras.
+                Este proceso garantiza que los derechos de autor sean reconocidos y protegidos legalmente, permitiendo a los autores ejercer sus derechos sobre sus respectivas obras.
             </p>
 
             <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg">Proceso de elaboración de avisos de privacidad</p>
+                <p class="text-purple-800 text-lg">Proceso de elaboración de avisos de privacidad</p>
             </div>
             <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                El aviso de privacidad es un documento fundamental que informa a los titulares de datos personales sobre cómo se recopilará, usará, almacenará y protegerá su información. Los elementos clave de un aviso de privacidad incluyen:
+                El aviso de privacidad es un documento mas que fundamental el cual informa a los titulares de datos personales sobre cómo se recopilará, usará, almacenará y protegerá su información. Los elementos clave de un aviso de privacidad suelen incluir:
             </p>
 
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue">
-                <li>Identidad del responsable: Información sobre la entidad o persona responsable del tratamiento de los datos personales.</li>
-                <li>Finalidades del tratamiento: Descripción clara de los propósitos para los cuales se recolectarán y utilizarán los datos personales.</li>
-                <li>Derechos ARCO: Información sobre los derechos de los titulares de los datos (Acceso, Rectificación, Cancelación y Oposición) y cómo pueden ejercerlos.</li>
-                <li>Transferencias de datos: Información sobre si los datos personales serán transferidos a terceros, y en su caso, a quiénes y con qué finalidad.</li>
-                <li>Transferencias de datos: Información sobre si los datos personales serán transferidos a terceros, y en su caso, a quiénes y con qué finalidad.</li>
+            <ul class="list-disc list-inside ml-auto text-dark-gray-blue">
+                <li><strong>Identidad del responsable:</strong> Información sobre la entidad o persona responsable del tratamiento de los datos personales.</li>
+                <li><strong>Finalidades del tratamiento:</strong> Descripción clara de los propósitos para los cuales se recolectarán y utilizarán los datos personales.</li>
+                <li><strong>Derechos ARCO:</strong> Información sobre los derechos de los titulares de los datos (Acceso, Rectificación, Cancelación y Oposición) y cómo pueden ejercerlos.</li>
+                <li><strong>Transferencias de datos:</strong> Información sobre si los datos personales serán transferidos a terceros, y en su caso, a quiénes y con qué finalidad.</li>
+                <li><strong>Transferencias de datos:</strong> Información sobre si los datos personales serán transferidos a terceros, y en su caso, a quiénes y con qué finalidad.</li>
             </ul>
 
             <p class="ml-auto font-bold text-dark-gray-blue text-justify">

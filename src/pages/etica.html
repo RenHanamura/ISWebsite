@@ -12,10 +12,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        .video-container {
+            position: relative;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body class="font-haken bg-gray-100 py-0">
 
-    <header class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-white py-4 shadow-lg">
+    <header class="bg-gradient-to-r from-teal-500 to-orange-500 text-white py-4 shadow-lg">
         <nav class="container mx-auto flex justify-between items-center px-10">
             <div class="flex items-center gap-4">
                 <a href="../../index.html">
@@ -37,61 +58,61 @@
         </nav>
     </header>
 
-    <section class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8">
-        <article class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-2xl p-10 text-white text-center md:rounded-2xl md:w-1/2 md:grid md:content-center">
-            <p class="text-2xl mb-2 font-bold">Mas información
-            </p>
-            <iframe src="https://www.youtube.com/embed/rzyidFFuwPs?si=VDMMB52O9j0utssY&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section class="container mx-auto mt-12 p-6 bg-white rounded-xl shadow-2xl md:flex md:max-w-6xl">
+        <article class="video-container bg-gradient-to-b from-teal-500 to-orange-500 text-white p-10 rounded-xl text-center md:w-1/2 flex flex-col justify-center items-center">
+            <h2 class="text-2xl font-bold mb-4">Más Información</h2>
+            <div class="video-overlay">
+            <iframe src="https://www.youtube.com/embed/mIuJt-mqhlY?si=Pj692SMRqY0Jpp6q&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-64 md:h-80 rounded-lg"></iframe>
         </article>
 
         <article class="p-10 grid gap-6 md:w-1/2">
             <h3 class="text-xl font-bold">Ética Informática</h3>
             
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                La ética informática se refiere a los principios y normas morales que rigen el comportamiento de los individuos en el uso de tecnologías de la información y comunicación. Incluye cuestiones como la privacidad, la seguridad, la propiedad intelectual y el impacto social de la tecnología. Los profesionales de la informática deben seguir códigos de ética que promuevan el uso responsable y ético de la tecnología, protegiendo los derechos de los usuarios y evitando acciones que puedan causar daño.
+            <p class="ml-auto text-dark-gray-blue text-justify">
+                Muchos autores también se han interesado por saber qué es la ética informática. Entre algunos tenemos: Mario González Arencibia, quien la define como una disciplina analiza los problemas éticos que genera la tecnología informática. Para Terrel Bynum, quien afirma que la ética informática es una disciplina que identifica y analiza el impacto de las tecnologías en los valores humanos y sociales, lo que implica un dilema moral por parte de las personas que manejan dicha tecnologías. Los dilemas éticos resaltan los riesgos asociados al uso de tecnologías, como engaño, creación de perfiles falsos para cometer estafas, invasión de la privacidad de otros, entre otros.
             </p>
 
-            <p class="ml-auto font-bold text-dark-gray-blue">
-                Principios Clave de la Ética Informática:
+            <p class="font-bold text-dark-gray-blue">
+                Objetivos de la Ética Informática:
             </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Privacidad: Respetar y proteger la información personal de los usuarios.</li><br/>
-                <li>Confidencialidad: Asegurar que los datos sensibles no sean accesibles a personas no autorizadas.</li><br/>
+            <ul class="list-disc list-inside ml-auto text-dark-gray-blue text-justify">
+                <li>Descubrir dilemas éticos.</li><br/>
+                <li>Determinar la medida en que estos dilemas son creados por la tecnología.</li><br/>
                 <li>Integridad: Mantener la exactitud y confiabilidad de la información.</li><br/>
-                <li>Responsabilidad: Asumir las consecuencias de las decisiones y acciones tomadas en el ámbito informático.</li><br/>
-                <li>Transparencia: Informar claramente sobre cómo se utilizan y protegen los datos de los usuarios​.</li><br/>
+                <li>Formular principios de actuación para hacer frente a las nuevas actividades que provoca la informática y, en las que no se perciben con claridad sus líneas de actuación.</li><br/>
+                <li>Aplicar la teoría ética para esclarecer los dilemas éticos.</li><br/>
             </ul>
 
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+            <div class="bg-light-blue/5 rounded-xl flex py-1 px- items-center">
                 <p class="ml-3 text-lime-800 text-lg">Delitos Informáticos</p>
             </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                Los delitos informáticos, también conocidos como ciberdelitos, son actividades ilegales que se realizan mediante el uso de sistemas informáticos o redes. Estos delitos pueden tener diferentes objetivos, como robar información, dañar sistemas, cometer fraudes, entre otros.
+            <p class="ml-auto text-dark-gray-blue text-justify">
+                Bajo la denominación de "delito informático", "ciberdelito" o "delito telemático” se encuadran los hechos que de alguna forma tienen dos componentes básicos: existencia de delito y uso de la informática. El delito informático se define como el acto delictivo en el que se hace uso de la informática para su comisión, bien sea como medio o como fin del mismo o como fin del mismo.
             </p>
-            <p class="ml-auto font-bold text-dark-gray-blue">
+            <p class="font-bold text-dark-gray-blue">
                 Tipos Comunes de Delitos Informáticos:
             </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Phishing: Técnica de fraude en línea que engaña a los usuarios para que revelen información personal y financiera.</li><br/>
-                <li>Malware: Software malicioso diseñado para infiltrarse y dañar sistemas informáticos sin el consentimiento del propietario.</li><br/>
-                <li>Hacking: Acceso no autorizado a sistemas informáticos para robar, modificar o destruir datos.</li><br/>
-                <li>Robo de Identidad: Uso no autorizado de la información personal de otra persona para cometer fraudes o delitos.</li><br/>
-                <li>Fraude Informático: Manipulación de datos o sistemas informáticos para obtener beneficios financieros.</li><br/>
+            <ul class="list-disc list-inside ml-auto text-dark-gray-blue text-justify">
+                <li><strong>Phishing:</strong> Técnica de fraude en línea que engaña a los usuarios para que revelen información personal y financiera.</li><br/>
+                <li><strong>Malware:</strong> Software malicioso diseñado para infiltrarse y dañar sistemas informáticos sin el consentimiento del propietario.</li><br/>
+                <li><strong>Hacking:</strong> Acceso no autorizado a sistemas informáticos para robar, modificar o destruir datos.</li><br/>
+                <li><strong>Robo de Identidad:</strong> Uso no autorizado de la información personal de otra persona para cometer fraudes o delitos.</li><br/>
+                <li><strong>Fraude Informático:</strong> Manipulación de datos o sistemas informáticos para obtener beneficios financieros.</li><br/>
             </ul>
 
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+            <div class="bg-light-blue rounded-xl flex py-1 px-6 items-center">
                 <p class="ml-3 text-lime-800 text-lg">Regulación de Delitos Informáticos en México</p>
             </div>
             <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                En México, los delitos informáticos están reconocidos y regulados por diversas leyes y códigos penales. El país ha adoptado medidas para combatir estos delitos a través de la modificación de sus ordenamientos penales y la cooperación internacional. México ha ratificado tratados internacionales como el Convenio de Budapest, que establece normas para combatir los delitos informáticos a nivel global.
+                En México, desde 1999, existe legislación federal para sancionar delitos informáticos en México, que afectan principalmente al sector financiero. Las organizaciones víctimas pueden enfrentar desde interrupciones y pérdidas de datos o dinero, hasta daños reputacionales. Incluso, en algunos casos, consecuencias legales.
             </p>
-            <p class="ml-auto font-bold text-dark-gray-blue">
+            <p class="font-bold text-dark-gray-blue">
                 Medidas Legislativas:
             </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Actualización de Códigos Penales: Reformas que permiten la inclusión de delitos informáticos específicos.</li><br/>
-                <li>Colaboración Internacional: Participación en tratados y acuerdos internacionales para armonizar leyes y mejorar las técnicas de investigación.</li><br/>
-                <li>Capacitación de Cuerpos Policiales: Especialización de policías y fiscales en la investigación y persecución de ciberdelitos​.</li><br/>
+            <ul class="list-disc list-inside ml-auto text-dark-gray-blue text-justify">
+                <li><strong>Actualización de Códigos Penales:</strong> Reformas que permiten la inclusión de delitos informáticos específicos.</li><br/>
+                <li><strong>Colaboración Internacional:</strong> Participación en tratados y acuerdos internacionales para armonizar leyes y mejorar las técnicas de investigación.</li><br/>
+                <li><strong>Capacitación de Cuerpos Policiales:</strong> Especialización de policías y fiscales en la investigación y persecución de ciberdelitos​.</li><br/>
             </ul>
             
         </article>

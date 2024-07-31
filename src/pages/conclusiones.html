@@ -1,115 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-</head>
-<body class="font-haken bg-gray-100 py-0">
-
-    <header class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-white py-4 shadow-lg">
-        <nav class="container mx-auto flex justify-between items-center px-10">
-            <div class="flex items-center gap-4">
-                <a href="../../index.html">
-                    <img class="w-12 cursor-pointer" src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png" alt="Logo">
-                </a>
-                <h1 class="text-3xl font-bold">Universidad Politecnica de Tecámac</h1>
-            </div>
-            <div class="nav-links hidden md:flex items-center gap-8">
-                <a class="hover:text-gray-300" href="./legislacion.html">Legislación</a>
-                <a class="hover:text-gray-300" href="./leyes.html">Leyes</a>
-                <a class="hover:text-gray-300" href="./procesos.html">Procesos</a>
-                <a class="hover:text-gray-300" href="./etica.html">Ética</a>
-                <a class="hover:text-gray-300" href="./caracteristicas.html">Características</a>
-                <a class="hover:text-gray-300" href="./conclusiones.html">Conclusiones</a>
-            </div>
-            <div class="md:hidden">
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer"></ion-icon>
-            </div>
-        </nav>
+  </head>
+  <body class="font-haken bg-gray-100 py-0">
+    <header
+      class="bg-gradient-to-r from-blue-500 to-violet-500 text-white py-4 shadow-lg"
+    >
+      <nav class="container mx-auto flex justify-between items-center px-10">
+        <div class="flex items-center gap-4">
+          <a href="../../index.html">
+            <img
+              class="w-12 cursor-pointer"
+              src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png"
+              alt="Logo"
+            />
+          </a>
+          <h1 class="text-3xl font-bold">Universidad Politecnica de Tecámac</h1>
+        </div>
+        <div class="nav-links hidden md:flex items-center gap-8">
+          <a class="hover:text-gray-300" href="./legislacion.html"
+            >Legislación</a
+          >
+          <a class="hover:text-gray-300" href="./leyes.html">Leyes</a>
+          <a class="hover:text-gray-300" href="./procesos.html">Procesos</a>
+          <a class="hover:text-gray-300" href="./etica.html">Ética</a>
+          <a class="hover:text-gray-300" href="./caracteristicas.html"
+            >Características</a
+          >
+          <a class="hover:text-gray-300" href="./conclusiones.html"
+            >Conclusiones</a
+          >
+        </div>
+        <div class="md:hidden">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer"
+          ></ion-icon>
+        </div>
+      </nav>
     </header>
 
-    <section class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8">
-        <article class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-2xl p-10 text-white text-center md:rounded-2xl md:w-1/2 md:grid md:content-center">
-            <p class="text-2xl mb-2 font-bold">Referencias
-            </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-white-gray-blue">
-                <li><a href="https://www.misabogados.com.co/blog/que-es-la-legislacion-informatica" target="_blank">¿Qué es la legislación informática?</a></li>
-            </ul>              
-            <ul class="list-disc list-inside ml-auto font-bold text-white-gray-blue">
-                <li> Garrido, A. (2005). "Delitos informáticos en México. Reconocimiento en los ordenamientos penales de las entidades mexicanas."<a href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-36072023000100005" target="_blank">https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-36072023000100005</a></li>
-            </ul>              
-            <ul class="list-disc list-inside ml-auto font-bold text-white-gray-blue">
-                <li> Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales. (s.f.). Aviso de privacida <a href="https://home.inai.org.mx/" target="_blank">https://home.inai.org.mx/</a></li>
-            </ul>              
-            <ul class="list-disc list-inside ml-auto font-bold text-white-gray-blue">
-                <li> Instituto Nacional del Derecho de Autor. (s.f.). Procedimiento de registro. <a href="https://www.indautor.gob.mx/" target="_blank">https://www.indautor.gob.mx/</a></li>
-            </ul>
-        </article>
+    <section
+      class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8"
+    >
+      <article
+        class="bg-gradient-to-b from-blue-500 to-violet-500 rounded-b-2xl p-10 text-white text-center md:rounded-2xl md:w-1/2 md:grid md:content-center"
+      >
+        <p class="text-2xl mb-2 font-bold">Referencias</p>
+        <ul
+          class="list-disc list-inside font-bold text-white-gray-blue"
+        >
+          <li>
+            <a
+              href="https://www.euroinnova.com/blog/que-es-la-etica-informatica#objetivos-de-la-etica-informatica"
+              target="_blank"
+              >¿Qué es la legislación informática?</a
+            >
+          </li>
+          <li>
+           <a
+              href="https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-36072023000100005"
+              target="_blank"
+              >¿Qué es la etica informática?</a
+            >
+          </li>
+          <li>
+            <a href="https://micrositios.inai.org.mx/marcocompetencias/?page_id=370" target="_blank"
+              >Leyes en México para la protección de datos personales</a
+            >
+          </li>
+          <li>
+            <a href="https://www.ertzaintza.euskadi.eus/lfr/web/ertzaintza/que-es-el-delito-informatico" target="_blank"
+              >¿Qué es el delito informático?</a
+            >
+          </li>
+          <li>
+            <a href="https://www.itmastersmag.com/ciberseguridad/delitos-informaticos-en-mexico-que-dice-la-ley/#:~:text=Desde%201999%2C%20existe%20legislación%20federal,en%20algunos%20casos%2C%20consecuencias%20legales." target="_blank"
+              >Delitos informáticos en México: las leyes y las multas</a
+            >
+          </li>
+          <li>
+            <a href="https://www.poderjudicialmichoacan.gob.mx/tribunalm/biblioteca/almadelia/Cap3.htm#:~:text=En%20forma%20general%2C%20las%20principales,el%20sujeto%20se%20halla%20trabajando." target="_blank"
+              >CARACTERISTICAS Y CLASIFICACION DE LOS DELITOS</a
+            >
+          </li>
+        </ul>
+      </article>
 
-        <article class="p-10 grid gap-6 md:w-1/2">
-            <h3 class="text-xl font-bold">Conclusiones</h3>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                La ética informática y la legislación sobre delitos informáticos son dos pilares fundamentales en la era digital, ya que proporcionan un marco normativo y moral para el uso adecuado y seguro de las tecnologías de la información. Ambos aspectos son cruciales para proteger los derechos de los individuos, mantener la integridad de los sistemas y garantizar la confianza en el entorno digital.
-            </p>
-            
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg">Ética Informática:</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                La ética informática se centra en los principios y normas que guían el comportamiento responsable en el uso de las tecnologías de la información. En un mundo cada vez más dependiente de la tecnología, la ética informática se convierte en una disciplina esencial para asegurar que los profesionales de TI actúen con responsabilidad y respeto hacia los usuarios y sus datos. Los principios de privacidad, confidencialidad, integridad, responsabilidad y transparencia son fundamentales para construir un entorno digital seguro y confiable. Estos principios ayudan a prevenir abusos y a fomentar una cultura de respeto y responsabilidad en el manejo de la información.
-            </p>
-            
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg">Ética Informática:</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                La ética informática se centra en los principios y normas que guían el comportamiento responsable en el uso de las tecnologías de la información. En un mundo cada vez más dependiente de la tecnología, la ética informática se convierte en una disciplina esencial para asegurar que los profesionales de TI actúen con responsabilidad y respeto hacia los usuarios y sus datos. Los principios de privacidad, confidencialidad, integridad, responsabilidad y transparencia son fundamentales para construir un entorno digital seguro y confiable. Estos principios ayudan a prevenir abusos y a fomentar una cultura de respeto y responsabilidad en el manejo de la información.
-            </p>
+      <article class="p-10 grid gap-6 md:w-1/2">
+        <h3 class="text-xl font-bold">Conclusiones</h3>
+        <p class="ml-auto text-dark-gray-blue text-justify">
+          El desarrollo de este sitio web sobre seguridad de la información ha
+          permitido una exploración exhaustiva de temas críticos como la
+          legislación informática, los derechos de autor, la privacidad, la
+          protección de datos y la ética informática. A través de las distintas
+          secciones del sitio, se ha proporcionado una visión clara y
+          comprensible de estos conceptos, resaltando su importancia en el
+          contexto actual. La información presentada no solo cumple con los
+          objetivos educativos, sino que también ofrece un recurso valioso para
+          cualquier individuo u organización que busque entender y aplicar
+          principios de seguridad de la información en su entorno digital. La
+          inclusión de elementos multimedia y el uso de un framework moderno
+          garantizan que el sitio web sea atractivo y accesible, facilitando la
+          comprensión y el aprendizaje. En conclusión, este proyecto no solo
+          cumple con los requisitos académicos establecidos, sino que también
+          contribuye significativamente a la educación en seguridad de la
+          información, promoviendo prácticas seguras y éticas en el manejo de
+          datos y recursos digitales.
+        </p>
 
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg">Delitos Informáticos:</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                Los delitos informáticos, por otro lado, representan una amenaza significativa para la seguridad y la privacidad en el mundo digital. La ciberdelincuencia abarca una amplia gama de actividades ilícitas, desde el acceso no autorizado a sistemas informáticos (hacking) y el uso de software malicioso (malware), hasta el fraude en línea y el robo de identidad. Estos delitos pueden tener consecuencias graves tanto para los individuos como para las organizaciones, incluyendo pérdidas financieras, daño a la reputación y compromisos de seguridad.
-            </p>
+        <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+          <p class="text-purple-800 text-lg">Ética Informática:</p>
+        </div>
+        <p class="text-dark-gray-blue text-justify">
+          La ética informática se centra en los principios y normas que guían el
+          comportamiento responsable en el uso de las tecnologías de la
+          información. En un mundo cada vez más dependiente de la tecnología, la
+          ética informática se convierte en una disciplina esencial para
+          asegurar que los profesionales de TI actúen con responsabilidad y
+          respeto hacia los usuarios y sus datos. Los principios de privacidad,
+          confidencialidad, integridad, responsabilidad y transparencia son
+          fundamentales para construir un entorno digital seguro y confiable.
+          Estos principios ayudan a prevenir abusos y a fomentar una cultura de
+          respeto y responsabilidad en el manejo de la información.
+        </p>
 
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg">Regulación y Legislación:</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                La respuesta legal a los delitos informáticos ha evolucionado para enfrentar los desafíos únicos que presentan. En México, por ejemplo, la legislación ha sido adaptada para incluir sanciones específicas para estos delitos y para mejorar la cooperación internacional en la persecución de ciberdelincuentes. La actualización de los códigos penales, la capacitación de cuerpos policiales especializados y la participación en tratados internacionales como el Convenio de Budapest son pasos importantes para fortalecer la lucha contra la ciberdelincuencia.
-            </p>
+        <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+          <p class="text-blue-800 text-lg">Ética Informática:</p>
+        </div>
+        <p class="ml-auto text-dark-gray-blue text-justify">
+          La ética informática se centra en los principios y normas que guían el
+          comportamiento responsable en el uso de las tecnologías de la
+          información. En un mundo cada vez más dependiente de la tecnología, la
+          ética informática se convierte en una disciplina esencial para
+          asegurar que los profesionales de TI actúen con responsabilidad y
+          respeto hacia los usuarios y sus datos. Los principios de privacidad,
+          confidencialidad, integridad, responsabilidad y transparencia son
+          fundamentales para construir un entorno digital seguro y confiable.
+          Estos principios ayudan a prevenir abusos y a fomentar una cultura de
+          respeto y responsabilidad en el manejo de la información.
+        </p>
 
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg">Importancia y Futuro:</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                La combinación de una sólida ética informática y una legislación efectiva es crucial para proteger los derechos de los usuarios y mantener la seguridad en el entorno digital. A medida que la tecnología continúa avanzando, será esencial que tanto la ética como la legislación se adapten para abordar nuevos desafíos y garantizar que el uso de la tecnología siga siendo beneficioso y seguro para todos.
-            </p>
+        <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+          <p class="text-lime-800 text-lg">Delitos Informáticos:</p>
+        </div>
+        <p class="ml-auto text-dark-gray-blue text-justify">
+          Los delitos informáticos, por otro lado, representan una amenaza
+          significativa para la seguridad y la privacidad en el mundo digital.
+          La ciberdelincuencia abarca una amplia gama de actividades ilícitas,
+          desde el acceso no autorizado a sistemas informáticos (hacking) y el
+          uso de software malicioso (malware), hasta el fraude en línea y el
+          robo de identidad. Estos delitos pueden tener consecuencias graves
+          tanto para los individuos como para las organizaciones, incluyendo
+          pérdidas financieras, daño a la reputación y compromisos de seguridad.
+        </p>
 
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                En conclusión, la ética informática y la legislación sobre delitos informáticos son componentes esenciales para una sociedad digital sana y segura. Los principios éticos guían el comportamiento responsable de los profesionales de TI, mientras que las leyes proporcionan un marco para prevenir y sancionar los abusos. Juntos, estos elementos forman la base para un uso seguro y responsable de la tecnología en la vida diaria y profesional.
-            </p>              
-        </article>
+        <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+          <p class="text-green-800 text-lg">Regulación y Legislación:</p>
+        </div>
+        <p class="ml-auto text-dark-gray-blue text-justify">
+          La respuesta legal a los delitos informáticos ha evolucionado para
+          enfrentar los desafíos únicos que presentan. En México, por ejemplo,
+          la legislación ha sido adaptada para incluir sanciones específicas
+          para estos delitos y para mejorar la cooperación internacional en la
+          persecución de ciberdelincuentes. La actualización de los códigos
+          penales, la capacitación de cuerpos policiales especializados y la
+          participación en tratados internacionales como el Convenio de Budapest
+          son pasos importantes para fortalecer la lucha contra la
+          ciberdelincuencia.
+        </p>
+
+        <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+          <p class="ml-3 text-orange-800 text-lg">Importancia y Futuro:</p>
+        </div>
+        <p class="ml-auto text-dark-gray-blue text-justify">
+          La combinación de una sólida ética informática y una legislación
+          efectiva es crucial para proteger los derechos de los usuarios y
+          mantener la seguridad en el entorno digital. A medida que la
+          tecnología continúa avanzando, será esencial que tanto la ética como
+          la legislación se adapten para abordar nuevos desafíos y garantizar
+          que el uso de la tecnología siga siendo beneficioso y seguro para
+          todos.
+        </p>
+
+        <p class="ml-auto text-dark-gray-blue text-justify">
+          En conclusión, la ética informática y la legislación sobre delitos
+          informáticos son componentes esenciales para una sociedad digital sana
+          y segura. Los principios éticos guían el comportamiento responsable de
+          los profesionales de TI, mientras que las leyes proporcionan un marco
+          para prevenir y sancionar los abusos. Juntos, estos elementos forman
+          la base para un uso seguro y responsable de la tecnología en la vida
+          diaria y profesional.
+        </p>
+      </article>
     </section>
 
     <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9%]')
-        }
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[9%]");
+      }
     </script>
-</body>
+  </body>
 </html>
-
-

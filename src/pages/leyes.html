@@ -1,103 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-</head>
-<body class="font-poppins bg-gray-50 py-0">
-
-    <header class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-white py-4 shadow-lg">
-        <nav class="container mx-auto flex justify-between items-center px-10">
-            <div class="flex items-center gap-4">
-                <a href="../../index.html">
-                    <img class="w-12 cursor-pointer" src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png" alt="Logo">
-                </a>
-                <h1 class="text-3xl font-bold">Universidad Politecnica de Tecámac</h1>
-            </div>
-            <div class="nav-links hidden md:flex items-center gap-8">
-                <a class="hover:text-gray-300" href="./legislacion.html">Legislación</a>
-                <a class="hover:text-gray-300" href="./leyes.html">Leyes</a>
-                <a class="hover:text-gray-300" href="./procesos.html">Procesos</a>
-                <a class="hover:text-gray-300" href="./etica.html">Ética</a>
-                <a class="hover:text-gray-300" href="./caracteristicas.html">Características</a>
-                <a class="hover:text-gray-300" href="./conclusiones.html">Conclusiones</a>
-            </div>
-            <div class="md:hidden">
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer"></ion-icon>
-            </div>
-        </nav>
+    <style>
+      .image-container {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        max-height: 100vh;
+        overflow: hidden;
+        transition: top 0.5s ease-in-out;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+      }
+      .image-container.open {
+        top: 0;
+      }
+      .image-placeholder {
+        cursor: pointer;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: white;
+        background-color: #4a4a4a;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+      }
+      .image-placeholder:hover {
+        background-color: #333;
+      }
+      .image-container img {
+        width: auto;
+        height: auto;
+        transition: transform 0.25s ease;
+        cursor: move;
+      }
+      .zoom-in {
+        transform: scale(1.5);
+      }
+      .zoom-out {
+        transform: scale(1);
+      }
+      .controls {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1001;
+      }
+      .controls button {
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        padding: 0.5rem;
+        margin: 0.2rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="font-poppins bg-gray-50 py-0">
+    <header
+      class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-white py-4 shadow-lg"
+    >
+      <nav class="container mx-auto flex justify-between items-center px-10">
+        <div class="flex items-center gap-4">
+          <a href="../../index.html">
+            <img
+              class="w-12 cursor-pointer"
+              src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png"
+              alt="Logo"
+            />
+          </a>
+          <h1 class="text-3xl font-bold">Universidad Politecnica de Tecámac</h1>
+        </div>
+        <div class="nav-links hidden md:flex items-center gap-8">
+          <a class="hover:text-gray-300" href="./legislacion.html"
+            >Legislación</a
+          >
+          <a class="hover:text-gray-300" href="./leyes.html">Leyes</a>
+          <a class="hover:text-gray-300" href="./procesos.html">Procesos</a>
+          <a class="hover:text-gray-300" href="./etica.html">Ética</a>
+          <a class="hover:text-gray-300" href="./caracteristicas.html"
+            >Características</a
+          >
+          <a class="hover:text-gray-300" href="./conclusiones.html"
+            >Conclusiones</a
+          >
+        </div>
+        <div class="md:hidden">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer"
+          ></ion-icon>
+        </div>
+      </nav>
     </header>
 
-    <section class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8">
-        <article class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-2xl p-10 text-white text-center md:rounded-2xl md:w-1/2 md:grid md:content-center">
-            <img src="https://www.gob.mx/cms/uploads/article/main_image/109872/principales.jpg">
-        </article>
+    <section
+      class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8"
+    >
+      <article
+        class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-2xl p-10 text-white text-center md:rounded-2xl md:w-1/2 md:grid md:content-center"
+      >
+        <div
+          class="image-placeholder bg-gradient-to-r from-light-slate-blue to-light-royal-blue hover:from-teal-400 hover:to-blue-500"
+          onclick="toggleImage()"
+        >
+          Más Información
+        </div>
+        <div class="image-container" id="image-container">
+          <div class="controls">
+            <button onclick="zoomIn()">Zoom In</button>
+            <button onclick="zoomOut()">Zoom Out</button>
+            <button onclick="toggleImage()">Cerrar</button>
+          </div>
+          <img
+            id="zoomable-image"
+            src="https://pbs.twimg.com/media/GI92zcUXUAAOZyy?format=jpg&name=large"
+            alt="Imagen de ejemplo"
+            draggable="false"
+          />
+        </div>
+      </article>
 
-        <article class="p-10 grid gap-6 md:w-1/2">
-            <h3 class="text-xl font-bold">Leyes</h3>
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-light-red text-lg">Leyes nacionales</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                En México, la legislación principal que regula los derechos de autor es la Ley Federal del Derecho de Autor (LFDA). 
-                Esta ley define los derechos de los autores sobre sus obras originales, incluyendo obras literarias, artísticas, musicales, cinematográficas y de software. 
-                También establece los requisitos para el registro de obras ante el Instituto Nacional del Derecho de Autor (INDAUTOR) y las limitaciones y excepciones a los derechos de autor.
-            </p>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                En materia de privacidad y protección de datos, la ley más importante es la Ley Federal de Protección de Datos Personales en Posesión de Particulares (LFPDPPP). 
-                Esta ley establece los principios y obligaciones que deben seguir las personas físicas y morales que traten datos personales, 
-                con el fin de proteger la privacidad de las personas. La ley también establece los derechos que tienen las personas para acceder, 
-                rectificar, cancelar y oponerse al tratamiento de sus datos personales.
-            </p>
-            
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-yellow-700 text-lg">Leyes internacionales</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                México es parte de diversos tratados internacionales relacionados con los derechos de autor, la privacidad y la protección de datos. 
-                Algunos de los tratados más importantes son:
-            </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Convenio de Berna para la Protección de las Obras Literarias y Artísticas: Este tratado establece un marco mínimo de protección para los derechos de autor a nivel internacional.</li>
-                <li>Tratado de Marrakech para Facilitar el Acceso a las Obras Literarias a Personas con Discapacidad Visual: Este tratado facilita el acceso a las obras literarias para personas con discapacidad visual mediante la creación de excepciones al derecho de autor.</li>
-                <li>Convenio del Consejo de Europa sobre Protección de Datos Personales: Este tratado establece los principios básicos para la protección de datos personales en Europa.</li>
-                <li>Convenio 108 del Consejo de Europa para la Protección de las Personas con Respecto al Tratamiento Automatizado de Datos de Carácter Personal: Este tratado complementa el Convenio del Consejo de Europa sobre Protección de Datos Personales y establece medidas específicas para la protección de datos en el contexto de la informática.</li>
-            </ul>
-            
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg">Trámites y requisitos de registro de obras ante la institución de derechos de autor</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                Para registrar una obra ante el INDAUTOR, se deben presentar los siguientes documentos:
-            </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Solicitud de registro: Esta solicitud debe contener información sobre la obra, el autor y el titular de los derechos de autor.</li>
-                <li>Ejemplares de la obra: Se deben presentar dos ejemplares de la obra, en el formato adecuado según el tipo de obra.</li>
-                <li>Pago de la tarifa de registro: La tarifa de registro varía según el tipo de obra.</li>
-            </ul>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                El INDAUTOR revisará la solicitud y los ejemplares de la obra y, si todo está correcto, emitirá un certificado de registro. 
-                El registro de una obra no es obligatorio, pero otorga al autor ciertos beneficios, como la presunción de la titularidad de los derechos de autor 
-                y la posibilidad de iniciar acciones legales en caso de infracción.
-            </p>
-        </article>
+      <article class="p-10 grid gap-6 md:w-1/2">
+        <h3 class="text-xl font-bold">Leyes</h3>
+        <div class="bg-light-blue/5 rounded-xl flex py-1 items-center">
+          <p class="text-light-red text-lg">Leyes nacionales</p>
+        </div>
+        <p class="ml-auto font-italic text-dark-gray-blue text-justify">
+          En México, el derecho a la protección de datos está regulado por
+          diversas normas dependiendo del área de que se trate. En cuanto a el
+          sector privado, tenemos la Ley Federal de Protección de Datos
+          Personales de los Particulares, mientras que en el sector existe la
+          Ley General de Protección de los bienes muebles en posesión de las
+          personas obligadas.
+        </p>
+        <p>
+          <strong
+            >Ley Federal de Protección de Datos Personales en Posesión de los
+            Particulares.</strong
+          >
+        </p>
+        <p class="ml-auto text-dark-gray-blue text-justify">
+          La LFPDPPP, publicada en el Diario Oficial de la Federación el 5 de
+          julio de 2010, tiene por objeto la protección de los datos personales
+          en posesión de los particulares, con la finalidad de regular su
+          tratamiento legítimo, controlado e informado, a efecto de garantizar
+          la privacidad y el derecho a la autodeterminación informativa de las
+          personas. La LFPDPPP es aplicable a todas las personas jurídicas que
+          traten datos personales. Es decir, la LFPDPPP aplica a todas las
+          empresas privadas que utilizan tus datos personales , como una empresa
+          de telefonía móvil, una empresa donde se realizan comunicaciones en
+          línea o una aplicación donde puedes ver películas y series.
+        </p>
+        <p>
+          <strong
+            >Ley General de Protección de Datos Personales en Posesión de
+            Sujetos Obligados</strong
+          >
+        </p>
+        <p class="ml-auto text-dark-gray-blue text-justify">
+          La LGPDPPSO, publicada en el Diario Oficial de la Federación el 26 de
+          enero de 2017, tiene como objetivo establecer las bases, principios y
+          procedimientos para garantizar el derecho de cualquier persona a
+          protección de sus datos personales en posesión de los sujetos
+          obligados. La LGPDPPSO establece que son sujetos sujetos obligados por
+          la misma a nivel federal, estatal y municipal, cualquier autoridad,
+          órgano y organización de los poderes ejecutivo, legislativo y
+          judicial, organismos autónomos, partidos políticas, fideicomisos y
+          públicos. Por ejemplo, la LGPDPPSO resulta aplicable cuando la
+          Presidencia de la República, la Cámara de Diputados, la Corte Suprema
+          de Justicia de la Nación o el Instituto Nacional Electoral procesan
+          datos personales.
+        </p>
+        <div class="bg-light-blue/5 rounded-xl flex py-1 items-center">
+          <p class="text-yellow-700 text-lg">Leyes internacionales</p>
+        </div>
+        <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+          México es parte de diversos tratados internacionales relacionados con
+          los derechos de autor, la privacidad y la protección de datos. Algunos
+          de los tratados más importantes son:
+        </p>
+        <ul
+          class="list-disc list-inside ml-auto text-dark-gray-blue text-justify"
+        >
+          <li>
+            <strong
+              >Convenio de Berna para la Protección de las Obras Literarias y
+              Artísticas:</strong
+            >
+            Este tratado establece un marco mínimo de protección para los
+            derechos de autor a nivel internacional.
+          </li>
+          <li>
+            <strong
+              >Tratado de Marrakech para Facilitar el Acceso a las Obras
+              Literarias a Personas con Discapacidad Visual:</strong
+            >
+            Este tratado facilita el acceso a las obras literarias para personas
+            con discapacidad visual mediante la creación de excepciones al
+            derecho de autor.
+          </li>
+          <li>
+            <strong
+              >Convenio del Consejo de Europa sobre Protección de Datos
+              Personales:</strong
+            >
+            Este tratado establece los principios básicos para la protección de
+            datos personales en Europa.
+          </li>
+          <li>
+            <strong
+              >Convenio 108 del Consejo de Europa para la Protección de las
+              Personas con Respecto al Tratamiento Automatizado de Datos de
+              Carácter Personal:</strong
+            >
+            Este tratado complementa el Convenio del Consejo de Europa sobre
+            Protección de Datos Personales y establece medidas específicas para
+            la protección de datos en el contexto de la informática.
+          </li>
+        </ul>
+
+        <div class="bg-light-blue/5 rounded-xl flex py-1 items-center">
+          <p class="text-lime-800 text-lg">
+            Trámites y requisitos de registro de obras ante la institución de
+            derechos de autor
+          </p>
+        </div>
+        <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+          Para registrar una obra ante el INDAUTOR, se deben presentar los
+          siguientes documentos:
+        </p>
+        <ol
+          class="list-disc list-inside ml-auto text-dark-gray-blue text-justify"
+        >
+          <li>
+            Solicitud de registro: Esta solicitud debe contener información
+            sobre la obra, el autor y el titular de los derechos de autor.
+          </li>
+          <li>
+            Ejemplares de la obra: Se deben presentar dos ejemplares de la obra,
+            en el formato adecuado según el tipo de obra.
+          </li>
+          <li>
+            Pago de la tarifa de registro: La tarifa de registro varía según el
+            tipo de obra.
+          </li>
+        </ol>
+        <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+          El INDAUTOR revisará la solicitud y los ejemplares de la obra y, si
+          todo está correcto, emitirá un certificado de registro. El registro de
+          una obra no es obligatorio, pero otorga al autor ciertos beneficios,
+          como la presunción de la titularidad de los derechos de autor y la
+          posibilidad de iniciar acciones legales en caso de infracción.
+        </p>
+      </article>
     </section>
 
+    <footer
+      class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-white py-4 shadow-lg mt-8"
+    >
+      <div class="container mx-auto flex flex-col items-center">
+        <p class="text-center">
+          © 2023 Universidad Politecnica de Tecámac. Todos los derechos
+          reservados.
+        </p>
+        <div class="flex justify-center gap-4 mt-4">
+          <a href="#" class="hover:text-gray-300"
+            ><ion-icon name="logo-twitter" class="text-2xl"></ion-icon
+          ></a>
+          <a href="#" class="hover:text-gray-300"
+            ><ion-icon name="logo-instagram" class="text-2xl"></ion-icon
+          ></a>
+          <a href="#" class="hover:text-gray-300"
+            ><ion-icon name="logo-linkedin" class="text-2xl"></ion-icon
+          ></a>
+        </div>
+      </div>
+    </footer>
+
     <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9%]')
-        }
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("hidden");
+      }
+
+      function toggleImage() {
+        const imageContainer = document.getElementById("image-container");
+        imageContainer.classList.toggle("open");
+      }
+
+      function zoomIn() {
+        const image = document.getElementById("zoomable-image");
+        image.classList.add("zoom-in");
+        image.classList.remove("zoom-out");
+      }
+
+      function zoomOut() {
+        const image = document.getElementById("zoomable-image");
+        image.classList.add("zoom-out");
+        image.classList.remove("zoom-in");
+      }
     </script>
-</body>
+  </body>
 </html>

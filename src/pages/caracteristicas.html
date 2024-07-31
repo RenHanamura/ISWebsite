@@ -1,97 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/estilos.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-</head>
-<body class="font-haken bg-gray-100 py-0">
-
-    <header class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue text-white py-4 shadow-lg">
-        <nav class="container mx-auto flex justify-between items-center px-10">
-            <div class="flex items-center gap-4">
-                <a href="../../index.html">
-                    <img class="w-12 cursor-pointer" src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png" alt="Logo">
-                </a>
-                <h1 class="text-3xl font-bold">Universidad Politecnica de Tecámac</h1>
-            </div>
-            <div class="nav-links hidden md:flex items-center gap-8">
-                <a class="hover:text-gray-300" href="./legislacion.html">Legislación</a>
-                <a class="hover:text-gray-300" href="./leyes.html">Leyes</a>
-                <a class="hover:text-gray-300" href="./procesos.html">Procesos</a>
-                <a class="hover:text-gray-300" href="./etica.html">Ética</a>
-                <a class="hover:text-gray-300" href="./caracteristicas.html">Características</a>
-                <a class="hover:text-gray-300" href="./conclusiones.html">Conclusiones</a>
-            </div>
-            <div class="md:hidden">
-                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer"></ion-icon>
-            </div>
-        </nav>
+    <style>
+        .video-container {
+            position: relative;
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .video-container:hover .video-overlay {
+            opacity: 1;
+        }
+    </style>
+  </head>
+  <body class="font-haken bg-gray-100 py-0">
+    <header
+      class="bg-gradient-to-r from-red-500 to-orange-500 text-white py-4 shadow-lg"
+    >
+      <nav class="container mx-auto flex justify-between items-center px-10">
+        <div class="flex items-center gap-4">
+          <a href="../../index.html">
+            <img
+              class="w-12 cursor-pointer"
+              src="https://uptecamac.edomex.gob.mx/sites/uptecamac.edomex.gob.mx/files/images/logo%20upt.png"
+              alt="Logo"
+            />
+          </a>
+          <h1 class="text-3xl font-bold">Universidad Politecnica de Tecámac</h1>
+        </div>
+        <div class="nav-links hidden md:flex items-center gap-8">
+          <a class="hover:text-gray-300" href="./legislacion.html"
+            >Legislación</a
+          >
+          <a class="hover:text-gray-300" href="./leyes.html">Leyes</a>
+          <a class="hover:text-gray-300" href="./procesos.html">Procesos</a>
+          <a class="hover:text-gray-300" href="./etica.html">Ética</a>
+          <a class="hover:text-gray-300" href="./caracteristicas.html"
+            >Características</a
+          >
+          <a class="hover:text-gray-300" href="./conclusiones.html"
+            >Conclusiones</a
+          >
+        </div>
+        <div class="md:hidden">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer"
+          ></ion-icon>
+        </div>
+      </nav>
     </header>
 
-    <section class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8">
-        <article class="bg-gradient-to-b from-light-slate-blue to-light-royal-blue rounded-b-2xl p-10 text-white text-center md:rounded-2xl md:w-1/2 md:grid md:content-center">
-            <p class="text-2xl mb-2 font-bold">Mas información
-            </p>
-            <iframe class="items-center" src="https://www.youtube.com/embed/_o-2fQ3bDRQ?si=ugG6buURoSyyzm3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </article>
+    <section
+      class="w-[90%] min-w-md mx-auto bg-white shadow-2xl md:flex md:rounded-2xl md:max-w-4xl mt-8"
+    >
+    <article class="video-container bg-gradient-to-b from-red-500 to-orange-500 text-white p-10 rounded-xl text-center md:w-1/2 flex flex-col justify-center items-center">
+    <h2 class="text-2xl font-bold mb-4">Más Información</h2>
+    <div class="video-overlay">
+        <iframe
+          class="items-center"
+          src="https://www.youtube.com/embed/_o-2fQ3bDRQ?si=ugG6buURoSyyzm3A&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-64 md:h-80 rounded-lg"></iframe>
+      </article>
 
+      <article class="p-10 grid gap-6 md:w-1/2">
+        <h3 class="text-xl font-bold">
+          Características de los delitos informáticos tipificados en México
+        </h3>
 
-        <article class="p-10 grid gap-6 md:w-1/2">
-            <h3 class="text-xl font-bold">Características de los delitos informáticos tipificados en México</h3>
-            
-            <p class="ml-auto font-bold text-dark-gray-blue">
-                El Código Penal Federal de México tipifica varios delitos informáticos, entre los cuales se encuentran:
-            </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Acceso ilícito a sistemas y datos: Entrar sin autorización a sistemas informáticos o redes para obtener, modificar o destruir información.</li><br/>
-                <li>Fraude informático: Obtener beneficios económicos mediante el uso de tecnologías de la información, como el acceso a sistemas financieros o la clonación de tarjetas de crédito.</li><br/>
-                <li>Distribución de contenido prohibido: Crear, distribuir o poseer material ilegal, como pornografía infantil o contenido que incite a la violencia.</li><br/>
-            </ul>
+        <p class="ml-auto font-bold text-dark-gray-blue">
+          En forma general segun el poder judicial, las principales
+          características que revisten los Delitos informáticos son
+        </p>
+        <ul class="list-disc ml-auto text-dark-gray-blue text-justify">
+          <li>Conductas criminógenas de cuello blanco.</li>
+          <br />
+          <li>
+            Son acciones ocupacionales, en cuanto que muchas veces se realizan
+            cuando el sujeto se halla trabajando.
+          </li>
+          <br />
+          <li>
+            Son acciones de oportunidad, en cuanto a que se aprovecha una
+            ocasión creada o altamente intensificada en el mundo de funciones y
+            organizaciones del sistema tecnológico y económico.
+          </li>
+          <br />
+          <li>
+            Provocan serias pérdidas económicas, ya que casi siempre producen
+            "beneficios" de más de cinco cifras a aquellos que los realizan.
+          </li>
+          <br />
+          <li>
+            Ofrecen facilidades de tiempo y espacio, ya que en milésimas de
+            segundo y sin una necesaria presencia física pueden llegar a
+            consumarse.
+          </li>
+          <br />
+          <li>
+            Son muchos los casos y pocas las denuncias, y todo ello debido a la
+            misma falta de regulación por parte del Derecho.
+          </li>
+          <br />
+          <li>
+            Son muy sofisticados y relativamente frecuentes en el ámbito
+            militar.
+          </li>
+          <br />
+          <li>
+            Presentan grandes dificultades para su comprobación, esto por su
+            mismo carácter técnico.
+          </li>
+          <br />
+          <li>
+            En su mayoría son imprudenciales y no necesariamente se cometen con
+            intención.
+          </li>
+          <br />
+          <li>Ofrecen facilidades para su comisión a los menores de edad.</li>
+          <br />
+          <li>
+            Tienden a proliferar cada vez más, por lo que requieren una urgente
+            regulación.
+          </li>
+          <br />
+          <li>
+            Por el momento siguen siendo ilícitos impunes de manera manifiesta
+            ante la ley
+          </li>
+          <br />
+        </ul>
 
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg">Aspectos legales:</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                La legislación mexicana aborda los delitos informáticos desde diversas perspectivas:
-            </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Sanciones penales: Establece penas de prisión y multas para quienes cometan delitos informáticos.</li><br/>
-                <li>Cooperación internacional: México colabora con otros países y organizaciones internacionales en la lucha contra el cibercrimen, mediante tratados y acuerdos de cooperación.</li><br/>
-                <li>Protección de infraestructuras críticas: Implementa medidas de seguridad para proteger sistemas y redes esenciales para la seguridad nacional y el bienestar público.</li><br/>
-            </ul>
+        <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+          <p class="text-lime-800 text-lg">Aspectos legales:</p>
+        </div>
+        <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+          La legislación mexicana aborda los delitos informáticos desde diversas
+          perspectivas:
+        </p>
+        <ul
+          class="list-disc list-inside ml-auto text-dark-gray-blue text-justify"
+        >
+          <li>
+            <strong>Sanciones penales:</strong> Establece penas de prisión y
+            multas para quienes cometan delitos informáticos.
+          </li>
+          <br />
+          <li>
+            <strong>Cooperación internacional:</strong> México colabora con
+            otros países y organizaciones internacionales en la lucha contra el
+            cibercrimen, mediante tratados y acuerdos de cooperación.
+          </li>
+          <br />
+          <li>
+            <strong>Protección de infraestructuras críticas:</strong> Implementa
+            medidas de seguridad para proteger sistemas y redes esenciales para
+            la seguridad nacional y el bienestar público.
+          </li>
+          <br />
+        </ul>
 
-            <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
-                <p class="ml-3 text-lime-800 text-lg"> Proceso de elaboración de códigos de conducta y ética informática</p>
-            </div>
-            <p class="ml-auto font-bold text-dark-gray-blue text-justify">
-                Los códigos de conducta en informática son documentos que establecen las expectativas de comportamiento y prácticas éticas para los profesionales de TI. Para elaborar un código de conducta efectivo, se deben considerar los siguientes pasos:                
-            </p>
-            <ul class="list-disc list-inside ml-auto font-bold text-dark-gray-blue text-justify">
-                <li>Identificación de principios éticos: Definir los valores y principios que guiarán el comportamiento de los profesionales de TI, como la integridad, la confidencialidad y la responsabilidad.</li><br/>
-                <li>Consultas y participación: Involucrar a los diferentes actores relevantes (empleados, clientes, reguladores) en la elaboración del código para asegurar que sea representativo y aplicable.</li><br/>
-                <li>Redacción clara y específica: Escribir el código de manera clara, concisa y específica, detallando las conductas esperadas y las sanciones por incumplimiento.</li><br/>
-                <li>Difusión y capacitación: Comunicar el código a todos los miembros de la organización y proporcionar capacitación sobre su contenido y aplicación.</li><br/>
-                <li>Revisión y actualización: Revisar y actualizar periódicamente el código para asegurar que se mantenga relevante y alineado con las leyes y normativas vigentes.</li><br/>
-            </ul>
-            
-        </article>
+        <div class="bg-light-blue/5 rounded-xl flex py-1 px-6 items-center">
+          <p class="text-blue-800 text-lg">
+            Proceso de elaboración de códigos de conducta y ética informática
+          </p>
+        </div>
+        <p class="ml-auto font-bold text-dark-gray-blue text-justify">
+          Los códigos de conducta en informática son documentos los cuales
+          establecen las expectativas de comportamiento y prácticas éticas para
+          los profesionales de TI. Para elaborar un código de conducta efectivo,
+          se deben considerar los siguientes pasos:
+        </p>
+        <ul
+          class="list-disc list-inside ml-auto text-dark-gray-blue text-justify"
+        >
+          <li>
+            <strong>Identificación de principios éticos:</strong> Definir los
+            valores y principios que guiarán el comportamiento de los
+            profesionales de TI, como la integridad, la confidencialidad y la
+            responsabilidad.
+          </li>
+          <br />
+          <li>
+            <strong>Consultas y participación:</strong> Involucrar a los
+            diferentes actores relevantes (empleados, clientes, reguladores) en
+            la elaboración del código para asegurar que sea representativo y
+            aplicable.
+          </li>
+          <br />
+          <li>
+            <strong>Redacción clara y específica:</strong> Escribir el código de
+            manera clara, concisa y específica, detallando las conductas
+            esperadas y las sanciones por incumplimiento.
+          </li>
+          <br />
+          <li>
+            <strong>Difusión y capacitación:</strong> Comunicar el código a
+            todos los miembros de la organización y proporcionar capacitación
+            sobre su contenido y aplicación.
+          </li>
+          <br />
+          <li>
+            <strong>Revisión y actualización:</strong> Revisar y actualizar
+            periódicamente el código para asegurar que se mantenga relevante y
+            alineado con las leyes y normativas vigentes.
+          </li>
+          <br />
+        </ul>
+      </article>
     </section>
 
     <script>
-        const navLinks = document.querySelector('.nav-links')
-        function onToggleMenu(e){
-            e.name = e.name === 'menu' ? 'close' : 'menu'
-            navLinks.classList.toggle('top-[9%]')
-        }
+      const navLinks = document.querySelector(".nav-links");
+      function onToggleMenu(e) {
+        e.name = e.name === "menu" ? "close" : "menu";
+        navLinks.classList.toggle("top-[9%]");
+      }
     </script>
-</body>
+  </body>
 </html>
