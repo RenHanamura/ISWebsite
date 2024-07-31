@@ -115,12 +115,12 @@
 
     <div class="mobile-menu hidden bg-white shadow-md fixed inset-0 z-50 p-6 md:hidden">
       <nav class="flex flex-col items-start gap-4">
-          <a class="hover:text-purple-600" href="./legislacion.html">Legislación</a>
-          <a class="hover:text-purple-600" href="./leyes.html">Leyes</a>
-          <a class="hover:text-purple-600" href="./procesos.html">Procesos</a>
-          <a class="hover:text-purple-600" href="./etica.html">Ética</a>
-          <a class="hover:text-purple-600" href="./caracteristicas.html">Características</a>
-          <a class="hover:text-purple-600" href="./conclusiones.html">Conclusiones</a>
+          <a class="hover:text-blue-600" href="./legislacion.html">Legislación</a>
+          <a class="hover:text-blue-600" href="./leyes.html">Leyes</a>
+          <a class="hover:text-blue-600" href="./procesos.html">Procesos</a>
+          <a class="hover:text-blue-600" href="./etica.html">Ética</a>
+          <a class="hover:text-blue-600" href="./caracteristicas.html">Características</a>
+          <a class="hover:text-blue-600" href="./conclusiones.html">Conclusiones</a>
       </nav>
   </div>
 
@@ -309,11 +309,11 @@
     </footer>
 
     <script>
-      const navLinks = document.querySelector(".nav-links");
-      function onToggleMenu(e) {
-        e.name = e.name === "menu" ? "close" : "menu";
-        navLinks.classList.toggle("hidden");
-      }
+      const navLinks = document.querySelector('.mobile-menu');
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            navLinks.classList.toggle('hidden');
+        }
 
       function toggleImage() {
         const imageContainer = document.getElementById("image-container");

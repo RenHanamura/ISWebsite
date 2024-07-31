@@ -224,10 +224,12 @@
       </article>
     </section>
     <script>
-      function onToggleMenu(icon) {
-        const menu = document.querySelector('.nav-links');
-        menu.classList.toggle('hidden');
-      }
+const navLinks = document.querySelector('.mobile-menu');
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu';
+            navLinks.classList.toggle('hidden');
+        }
+
     </script>
   </body>
 </html>
